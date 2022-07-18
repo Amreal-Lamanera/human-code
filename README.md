@@ -85,7 +85,7 @@
 - ALTRIMENTI
     <!-- PRIORITA' AL GRUPPO -->
     - SE qualcuno propone un film/serie
-        - SE è presente
+        - PER OGNI proposta
         - Controllo durata
         - SE non abbiamo tempo
             - SE mi interessa
@@ -93,4 +93,4 @@
         - ALTRIMENTI si guarda il trailer tutti insieme
         - SE alla maggioranza va bene
             - PLAY FINE
-        - ALTRIMENTI SE C'E' un'altra idea RIGA 88
+        - ALTRIMENTI ricomincio CICLO (RIGA 88)
