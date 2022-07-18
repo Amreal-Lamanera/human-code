@@ -1,5 +1,10 @@
 # Scegliere cosa guardare su Netflix
 
+###### Scegliere cosa guardare su Netflix
+###### Che barba, che noia, che noia, che barba!
+###### Perché ci si mette sempre un’ora a scegliere cosa guardare la sera? Certo è difficile mettere d’accordo i gusti di tutti, poi dipende anche in base al tempo (o al sonno) che abbiamo. Delle volte si pensa di vedere quel bel film che ci hanno consigliato, mentre altre volte si viene risucchiati da quella serie tv che ci tiene incollati allo schermo. Che senso di vuoto quando poi finisce! 
+
+
 - Controllo quanto tempo ho a disposizione
 - SE non ho tempo (meno di 20 minuti) OR ho sonno
     - Rimando Netflix - FINE
@@ -14,17 +19,18 @@
     <!-- PRIORITA' NELLA MIA TESTA -->
     - SE so cosa guardare
         - SE è presente
-        - Controllo durata
-        - SE non ho tempo
-            - Aggiungo alla "mia lista" netflix
-        - ALTRIMENTI inizio a guardarlo FINE
+            - Controllo durata
+            - SE non ho tempo
+                - Aggiungo alla "mia lista" netflix
+            - ALTRIMENTI inizio a guardarlo FINE
 
     <!-- LA MIA LISTA NETFLIX -->
     - SE ho film o serie nella mia lista
         - Controllo durata
         - SE non ho tempo
             - Aggiungo alla "mia lista" netflix
-        - ALTRIMENTI inizio a guardarlo FINE
+        - ALTRIMENTI 
+            - inizio a guardarlo FINE
 
     <!-- CONSIGLI AMICI -->
     - SE ho consigli di amici
@@ -35,9 +41,12 @@
                     - Controllo durata
                         - SE non ho tempo
                             - Aggiungo alla "mia lista" netflix
-                        - ALTRIMENTI inizio a guardarlo FINE
-                - ALTRIMENTI (NON MI INTERESSA) passo al prossimo consiglio
-            - ALTRIMENTI (NON PRESENTE) passo al prossimo consiglio
+                        - ALTRIMENTI 
+                            - inizio a guardarlo FINE
+                - ALTRIMENTI (NON MI INTERESSA) 
+                    - passo al prossimo consiglio
+            - ALTRIMENTI (NON PRESENTE) 
+                - passo al prossimo consiglio
 
     <!-- NESSUNA IDEA O CONSIGLIO -->
     - SE ho fra i 20 e i 60 minuti 
@@ -51,34 +60,38 @@
         - PER ogni film/serie controllo
             - SE l'ho già visto & NON voglio rivederlo
                 -Passo al prossimo
-            - ALTRIMENTI SE l'ho già visto & voglio rivederlo
-                - PLAY FINE
-                - ALTRIMENTI SE NON l'ho visto
-                    - guardo il trailer
-                    - SE mi interessa
-                        - PLAY FINE
-                    ALTRIMENTI (NON mi interessa)
-                        - ricomincio CICLO (RIGA 51)
+            - ALTRIMENTI 
+                -SE l'ho già visto & voglio rivederlo
+                    - PLAY FINE
+                - ALTRIMENTI 
+                    - SE NON l'ho visto
+                        - guardo il trailer
+                        - SE mi interessa
+                            - PLAY FINE
+                        - ALTRIMENTI (NON mi interessa)
+                            - ricomincio CICLO (RIGA 60)
 
     - PER ogni altra categoria
         - PER ogni film/serie controllo
             - SE l'ho già visto & NON voglio rivederlo
                 -Passo al prossimo
-            - ALTRIMENTI (SE l'ho già visto & voglio rivederlo)
-                - PLAY FINE
-            - ALTRIMENTI (SE NON l'ho visto)
-                - guardo il trailer
-                - SE mi interessa
+            - ALTRIMENTI 
+                - SE l'ho già visto & voglio rivederlo
                     - PLAY FINE
-                ALTRIMENTI (NON mi interessa)
-                    - ricomincio CICLO (RIGA 64)
+                - ALTRIMENTI 
+                    -SE NON l'ho visto
+                    - guardo il trailer
+                    - SE mi interessa
+                        - PLAY FINE
+                    ALTRIMENTI (NON mi interessa)
+                        - ricomincio CICLO (RIGA 75)
 
     - PER x volte provo tasto "SORPRENDIMI"
         -guardo il trailer
         - SE mi interessa
             - PLAY FINE
         - ALTRIMENTI (NON mi interessa)
-            - ricomincio CILCO (RIGA 76)
+            - ricomincio CILCO (RIGA 89)
 
     - CAMBIO CATALOGO STREAMING O FACCIO ALTRO
 
@@ -93,4 +106,4 @@
         - ALTRIMENTI si guarda il trailer tutti insieme
         - SE alla maggioranza va bene
             - PLAY FINE
-        - ALTRIMENTI ricomincio CICLO (RIGA 88)
+        - ALTRIMENTI ricomincio CICLO (RIGA 101)
